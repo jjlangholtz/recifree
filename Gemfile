@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -22,3 +23,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'pry-rails', group: :development
 gem 'quiet_assets', group: :development
+
+# Production
+gem 'unicorn'
+gem 'rails_12factor', group: :production
