@@ -4,5 +4,6 @@ class HomeController < ApplicationController
 
   def index
     @user = current_user
+    @recipes = Recipe.order(:name)
   end
 end

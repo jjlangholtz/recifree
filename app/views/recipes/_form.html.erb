@@ -1,0 +1,11 @@
+<%= simple_form_for(@recipe) do |f| %>
+  <fieldset>
+    <legend>Add Recipe</legend>
+    <h4>Add a new Recipe.</h4>
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :directions %>
+    <%= f.button :submit %>
+    <%= link_to "Back", root_path %>
+  </fieldset>
+<% end %>

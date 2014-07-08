@@ -3,6 +3,7 @@
   <fieldset>
     <legend>Sign up</legend>
     <h4>Join Recifree today.</h4>
+    <%= f.error_notification %>
     <%= f.input :email, label: false, placeholder: 'Email', required: true, autofocus: true %>
     <%= f.input :password, label: false, placeholder: 'Password', required: true %>
     <%= f.button :submit, "Sign up", class: 'button small radius' %>
