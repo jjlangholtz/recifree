@@ -13,6 +13,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem 'postmark-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'acts-as-taggable-on'
 
 # Styling
 gem 'foundation-rails'
