@@ -61,6 +61,11 @@ class RecipesController < ApplicationController
     end
   end
 
+  def tags
+    @tag = params[:tag]
+    @recipes = Recipe.tagged_with(@tag)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
@@ -69,6 +74,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :photo, :directions)
+      params.require(:recipe).permit(:name, :photo, :directions, :tag_list)
     end
 end

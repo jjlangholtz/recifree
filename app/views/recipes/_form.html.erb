@@ -4,6 +4,7 @@
     <h4>Add a new Recipe.</h4>
     <%= f.input :name %>
     <%= f.input :photo %>
+    <%= f.input :tag_list, hint: 'Separate tags with commas.' %>
     <%= f.input :directions %>
     <%= f.button :submit %>
     <%= link_to "Back", root_path %>
