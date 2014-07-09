@@ -17,6 +17,7 @@
       <div class="large-12 columns">
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <fieldset>
+            <%= f.error_notification %>
             <div class="row collapse">
               <div class="large-12 columns">
                 <%= f.input :email, label: false, placeholder: 'Email', required: false, autofocus: true %>

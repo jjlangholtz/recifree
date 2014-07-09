@@ -29,8 +29,21 @@
       </section>
     </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <div class="large-6 columns large-centered text-center">
+        <div data-alert class="alert-box info radius">
+          <%= notice %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="large-6 columns large-centered text-center">
+        <div data-alert class="alert-box alert radius"><%= alert %></div>
+          <%= alert %>
+        </div>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
