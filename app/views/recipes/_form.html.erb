@@ -1,7 +1,8 @@
 <%= simple_form_for(@recipe) do |f| %>
   <fieldset>
-    <legend>Add Recipe</legend>
-    <h4>Add a new Recipe.</h4>
+    
+    <legend><%= @recipe.name ? 'Edit' : 'Add' %> Recipe</legend>
+    <h4><%= @recipe.name ? 'Edit' : 'Add a new' %> Recipe.</h4>
     <%= f.input :name %>
     <%= f.input :photo %>
     <%= f.input :tag_list, hint: 'Separate tags with commas.' %>

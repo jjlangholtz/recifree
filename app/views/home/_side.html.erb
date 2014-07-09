@@ -1,1 +1,4 @@
-<%= link_to "New Recipe", new_recipe_path %>
+<ul>
+  <li><%= link_to "New Recipe", new_recipe_path %></li>
+  <li><%= link_to "Back", root_path unless controller.controller_name == 'home' %></li>
+</ul>

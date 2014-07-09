@@ -1,1 +1,17 @@
-<%= render @recipes %>
+<div class="row collapse">
+  <div class="large-12 columns text-center">
+    <h3>All Recipes Tagged As <%= @tag.capitalize %></h3>
+  </div>
+</div>
+<div class="row collapse">
+  <div class="large-2 columns" id="side">
+    <%= render 'home/side' %>
+  </div>
+
+  <div class="large-10 columns">
+    <ul class="small-block-grid-3">
+      <%= render @recipes %>
+    </ul>
+  </div>
+</div>
+

@@ -1298,3 +1298,11 @@
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+
+small.hint {
+  @include form-error-message($bg: #f4bf75)
+}
+
+.hint input, .hint textarea, .hint select {
+  margin-bottom: 0;
+}

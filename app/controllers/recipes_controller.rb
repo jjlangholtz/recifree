@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  layout 'home'
+
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   # GET /recipes
@@ -56,7 +58,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe.destroy
     respond_to do |format|
-      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
