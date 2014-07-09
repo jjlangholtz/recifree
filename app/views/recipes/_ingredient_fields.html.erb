@@ -1,0 +1,17 @@
+<div class="row nested-fields">
+  <div class="large-2 columns">
+    <%= f.input :amount, label: false, placeholder: '#' %>
+  </div>
+
+  <div class="large-3 columns">
+    <%= f.input :unit, label: false, placeholder: 'Cup' %>
+  </div>
+
+  <div class="large-6 columns">
+    <%= f.input :name, label: false, placeholder: 'Broccoli' %>
+  </div>
+
+  <div class="large-1 columns">
+    <%= link_to_remove_association "X", f, class: 'button tiny alert radius' %>
+  </div>
+</div>

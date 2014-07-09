@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @ingredients = @recipe.ingredients
   end
 
   # GET /recipes/new
@@ -76,6 +77,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:name, :photo, :directions, :tag_list)
+      params.require(:recipe).permit(:name, :photo, :directions, :tag_list, ingredients_attributes: [:id, :amount, :unit, :name, :_destroy])
     end
 end
