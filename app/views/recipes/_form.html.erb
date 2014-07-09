@@ -4,6 +4,7 @@
     <div class="row">
       <div class="large-6 columns">
         <h4><%= @recipe.name ? 'Edit' : 'Add a new' %> Recipe.</h4>
+        <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } unless @recipe.name %>
         <%= f.input :name, label: false, placeholder: 'Name' %>
         <%= f.input :tag_list, label: false, placeholder: 'Tags', hint: 'Separate tags with commas.' %>
         <%= f.input :photo %>
