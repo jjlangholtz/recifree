@@ -65,7 +65,7 @@ class RecipesController < ApplicationController
 
   def tags
     @tag = params[:tag]
-    @recipes = Recipe.tagged_with(@tag)
+    @recipes = Recipe.tagged_with(@tag).order(:name)
   end
 
   private

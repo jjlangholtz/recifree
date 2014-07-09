@@ -1,9 +1,16 @@
 <div class="row collapse">
   <div class="large-12 columns text-center">
     <h3>All Recipes</h3>
+    <div>
+      <% ActsAsTaggableOn::Tag.all.each do |tag| %>
+        <% unless tag.taggings_count == 0 %>
+          <span class="secondary radius label"><%= link_to tag, tag_recipes_path(tag.name) %></span>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
-<div class="row collapse">
+<div class="row collapse top-margin">
   <div class="large-2 columns" id="side">
     <%= render 'side' %>
   </div>

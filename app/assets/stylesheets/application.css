@@ -47,3 +47,8 @@ fieldset {
   color: snow;
   font-size: 1.3em;
 }
+
+.top-margin {
+  margin-top: 50px;
+}
+
