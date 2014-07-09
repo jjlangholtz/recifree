@@ -1,4 +1,11 @@
-<ul class="small-block-grid-3">
-  <%= render @recipes %>
-</ul>
-<%= link_to "New Recipe", new_recipe_path %>
+<div class="row collapse">
+  <div class="large-2 columns" id="side">
+    <%= render 'side' %>
+  </div>
+
+  <div class="large-10 columns">
+    <ul class="small-block-grid-3">
+      <%= render @recipes %>
+    </ul>
+  </div>
+</div>

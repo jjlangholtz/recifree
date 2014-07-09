@@ -1,19 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="row collapse top-margin">
+  <div class="large-2 columns">
+    <%= render 'home/side' %>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @recipe.name %>
-</p>
+  <div class="large-4 columns" id="main">
+    <h3><%= @recipe.name %></h3>
+    <p><%= @recipe.directions %></p>
+  </div>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @recipe.photo %>
-</p>
-
-<p>
-  <strong>Directions:</strong>
-  <%= @recipe.directions %>
-</p>
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+  <div class="large-4 columns" id="photo">
+    <%= image_tag @recipe.photo.url %>
+    <%= link_to "Back", root_path %>
+    <span class="right">
+      <%= link_to "Edit", edit_recipe_path(@recipe) %> |
+      <%= link_to "Delete", recipe_path(@recipe), method: :delete %>
+    </span>
+  </div>
+</div>
