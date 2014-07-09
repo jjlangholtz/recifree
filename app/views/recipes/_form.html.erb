@@ -1,12 +1,12 @@
 <%= simple_form_for(@recipe) do |f| %>
   <fieldset>
-    
     <legend><%= @recipe.name ? 'Edit' : 'Add' %> Recipe</legend>
     <h4><%= @recipe.name ? 'Edit' : 'Add a new' %> Recipe.</h4>
-    <%= f.input :name %>
+    <%= f.input :name, label: false, placeholder: 'Name' %>
     <%= f.input :photo %>
-    <%= f.input :tag_list, hint: 'Separate tags with commas.' %>
-    <%= f.input :directions, hint: 'Separate steps with commas.', input_html: { rows: 4 } %>
+    <%= f.input :tag_list, label: false, placeholder: 'Tags', hint: 'Separate tags with commas.' %>
+    <%= f.input :directions, label: false, placeholder: 'Directions', hint: 'Separate each step with commas (Ex. cook, eat, enjoy).',
+                input_html: { rows: 4 } %>
     <%= f.button :submit %>
     <%= link_to "Back", root_path %>
   </fieldset>
