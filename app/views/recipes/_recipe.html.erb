@@ -1,8 +1,10 @@
 <li>
   <div><%= link_to image_tag(recipe.photo.thumb.url), recipe_path(recipe) %></div>
   <div><%= link_to recipe.name, recipe_path(recipe) %></div>
-  <div>
-    <span>Submitted by: </span>
-    <%= link_to recipe.user.name, root_path %>
-  </div>
+  <% if controller.controller_name == 'home' %>
+    <div>
+      <span>Submitted by: </span>
+      <%= link_to recipe.user.name, user_path(recipe.user_id) %>
+    </div>
+  <% end %>
 </li>

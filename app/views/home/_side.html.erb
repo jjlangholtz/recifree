@@ -1,7 +1,7 @@
-<h4>
-  <%= gravatar_for current_user %>
-  <%= current_user.name %>
-</h4>
+<h5>
+  <%= link_to gravatar_for(current_user, 120), user_path(current_user)  %>
+  <%= link_to current_user.name, user_path(current_user) %>
+</h5>
 <ul>
   <li><%= link_to "New Recipe", new_recipe_path %></li>
   <li><%= link_to "Back", root_path unless controller.controller_name == 'home' %></li>

@@ -52,3 +52,6 @@ fieldset {
   margin-top: 50px;
 }
 
+.gravatar {
+  border-radius: 20%;
+}

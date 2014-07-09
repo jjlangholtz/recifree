@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="large-4 columns">
+    <%= gravatar_for @user, 160 %>
+    <h4><%= @user.name %></h4>
+  </div>
+
+  <div class="large-8 columns">
+    <h2>Your Submitted Recipes</h2>
+    <ul class="small-block-grid-2">
+      <%= render @user.recipes %>
+    </ul>
+  </div>
+</div>
