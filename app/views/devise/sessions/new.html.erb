@@ -2,9 +2,11 @@
   <%= image_tag 'background.jpg' %>
 </div>
 
-<div class="notice">
-  <%= notice %>
-</div>
+<% if notice %>
+  <div class="notice">
+    <%= notice %>
+  </div>
+<% end %>
 
 <div class="row collapse">
   <div class="large-6 columns main-content">
