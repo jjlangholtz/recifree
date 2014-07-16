@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     get 'tags/:tag' => 'recipes#tags', on: :collection, as: :tag
   end
 
-  namespace :api, constraints: { subdomain: 'api' } do
+  namespace :api, format: :json do
     resources :recipes, only: [:index]
   end
 
