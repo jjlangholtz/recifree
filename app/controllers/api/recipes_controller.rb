@@ -1,8 +1,8 @@
-class API::RecipesController < BaseController
+class API::RecipesController < API::BaseController
   respond_to :json
 
   def index
-    @recipes = Recipe.order(:name)
+    @recipes = Recipe.order(:name).page params[:page]
   end
 
   def show
