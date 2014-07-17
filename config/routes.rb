@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     get 'tags/:tag' => 'recipes#tags', on: :collection, as: :tag
   end
 
-  namespace :api, format: :json do
-    resources :recipes, only: [:index]
+  namespace :api, defaults: { format: :json } do
+    resources :recipes, only: [:index, :show]
   end
 
   devise_for :users
